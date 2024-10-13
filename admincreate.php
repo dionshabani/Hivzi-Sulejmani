@@ -1,11 +1,11 @@
 <?php
 session_start();
-include "connect.php"; // Ensure you include your database connection file
+include "connect.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
-    $username = $_POST['username']; // Use the input from the form
-    $password = $_POST['password']; // Use the input from the form
+    $username = $_POST['username']; 
+    $password = $_POST['password']; 
 
     // Hash the password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT); 
